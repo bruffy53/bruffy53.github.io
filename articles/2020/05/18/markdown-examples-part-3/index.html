@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Linux and Python Snippets, ">
+
+        <link rel="alternate"  href="/feeds/all.atom.xml" type="application/atom+xml" title="Linux and Python Snippets Full Atom Feed"/>
+
+        <title>Markdown Examples Part 3 // Linux and Python Snippets // </title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/theme/css/pure.css">
+    <link rel="stylesheet" href="/theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+            <hgroup>
+                <a href="/author/bruffy53.html" title="See posts by Bruffy53">
+                </a>
+                <h2 class="article-info">Bruffy53</h2>
+                <small class="about-author"></small>
+                <h5>Published</h5>
+                <p>Mon 18 May 2020</p>
+                <a href="/">&larr;Home</a>
+            </hgroup>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Markdown Examples Part 3</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="/tag/markdown">markdown</a>
+                                <a class="post-category" href="/tag/pygments">pygments</a>
+                        </p>
+                </header>
+            </section>
+            <p>Code blocks are preceeded by an indent, three : symbols and the name of the language.<br>
+All of the following code will be highlighted while the text is indented.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">do_twice</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">wrapper_do_twice</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="k">return</span> <span class="n">wrapper_do_twice</span>
+
+<span class="nd">@do_twice</span>
+<span class="k">def</span> <span class="nf">say_whee</span><span class="p">(</span><span class="n">some_text</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">some_text</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Whee!&#39;</span>
+<span class="n">say_whee</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+            <div class="hr"></div>
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Linux and Python Snippets &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
